@@ -20,7 +20,7 @@ th{background:var(--blue);color:white}th,td{padding:10px;border:1px solid var(--
 <div class="step"><b>2. 집중 관측</b><br>예비 상위 10개와 모든 보유종목의 체결강도를 최소 3분 관측</div>
 <div class="step"><b>3. 진입·로테이션</b><br>최종 100점과 가격 안정·매수 회복을 확인해 진입 또는 교체</div>
 <div class="step"><b>4. 보유 보호</b><br>실시간 별도 엔진이 손절·익절·시간청산을 최우선 처리</div>
-</div><p class="danger"><b>중요:</b> 점수와 과거 변동성은 수익을 보장하지 않습니다. -7% 강제손절과 데이터·계좌 무결성 게이트는 후보 점수보다 항상 우선합니다.</p></section>
+</div><p class="danger"><b>중요:</b> 점수와 과거 변동성은 수익을 보장하지 않습니다. -5% 강제손절과 데이터·계좌 무결성 게이트는 후보 점수보다 항상 우선합니다.</p></section>
 
 <section><h2>종목 선정과 기회점수 v2</h2><p>같은 점수를 최초 선정과 보유종목 대비 로테이션에 공통 사용합니다. AI 등급은 주문 자격에 쓰지 않습니다.</p>
 <div class="table-wrap"><table><thead><tr><th>구성</th><th>배점</th><th>의미</th></tr></thead><tbody>
@@ -55,9 +55,9 @@ th{background:var(--blue);color:white}th,td{padding:10px;border:1px solid var(--
 </ul></section>
 
 <section><h2>손절·익절·시간청산</h2><div class="table-wrap"><table><thead><tr><th>구간</th><th>현재 실전 로직</th></tr></thead><tbody>
-<tr><td>-3%</td><td>매도압력·약세·시장 스트레스가 강할 때 조기 방어 매도</td></tr>
-<tr><td>-5%</td><td>매우 강한 회복 신호가 15초 관측 중인 예외만 잠시 보류하고, 그 외에는 방어 매도</td></tr>
-<tr><td>-7%</td><td>다른 조건과 무관하게 전량 강제손절</td></tr>
+<tr><td>-1%</td><td>매도압력과 가격 약세가 함께 매우 강할 때 조기 방어 매도</td></tr>
+<tr><td>-3%</td><td>-1% 구간보다 완화된 방어 조건으로 매도압력·약세·시장 스트레스를 확인</td></tr>
+<tr><td>-5%</td><td>다른 조건과 무관하게 매도 가능 수량 전부를 즉시 강제손절</td></tr>
 <tr><td>+3% 이상</td><td>익절 엔진 활성. 고점 대비 1.0% 반납과 약세가 함께 확인되면 익절</td></tr>
 <tr><td>+5% 이상</td><td>고점 대비 1.5% 반납과 약세 확인</td></tr>
 <tr><td>+8% 이상</td><td>추세 수익구간으로 보고 고점 대비 2.0% 반납과 약세 확인</td></tr>
